@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* html, body {
+  position: fixed;
+  width: 1080px;
+  height: 4320px;
+  overflow: hidden;
+  border: 0px;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding-bottom: 0px;
+  overflow: 0px;
+  background-color: #CDE1E2;
+}
+
+#canvas {
+  background-color: #FFF;
+}
