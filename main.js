@@ -1,6 +1,5 @@
-var canvasMain = document.getElementById('canvas');
-var ctx = canvasMain.getContext('2d');
-
+var background = document.getElementById('background');
+var btx = background.getContext('2d');
 
 function onload() {
   document.addEventListener("deviceready", onDeviceReady, false);
@@ -22,8 +21,6 @@ function onResume() {
 
 // load images
 
-
-
 // onlaod runs one time and in the end runs draw with requestAnimationFrame
 function test() {
   // positions var
@@ -33,21 +30,15 @@ function test() {
 
 // runs after test is finished and has an requestAnimationFrame
 function draw() {
-  var windowWidth = window.innerWidth;
-  var windowHeight = window.innerHeight;
   var pixelRatio = window.devicePixelRatio || 1; /// get pixel ratio of device
 
-  canvasMain = document.getElementById("canvas");
+  background.width = 393 * pixelRatio;   /// resolution of canvas
+  background.height = 786 * pixelRatio;
 
-  canvasMain.width = windowWidth * pixelRatio;   /// resolution of canvas
-  canvasMain.height = windowHeight * pixelRatio;
-
-  canvasMain.style.width = windowWidth + 'px';   /// CSS size of canvas
-  canvasMain.style.height = windowHeight + 'px';
+  background.style.width = 393 + 'px';   /// CSS size of canvas
+  background.style.height = 786 + 'px';
 
   //drawImage
-  ctx.fillText(window.innerWidth, 10, 150);
-  ctx.fillText(window.innerHeight, 10, 200);
 
 
   //requestAnimationFrame
